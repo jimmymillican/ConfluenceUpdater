@@ -1,0 +1,47 @@
+.container {
+  margin: 20px;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.custom-table th {
+  background-color: #f4f4f4;
+}
+
+.bulk-update {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.bulk-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.bulk-button:hover {
+  background-color: #0056b3;
+}
+
+.success-icon {
+  color: green;
+  margin-left: 8px;
+  font-size: 18px;
+}

@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Confluence Bulk Title Update</h1>
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Current Title</th>
+          <th>New Title</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let page of pages">
+          <td>{{ page.title }}</td>
+          <td>
+            <input type="text" [(ngModel)]="page.newTitle" />
+          </td>
+          <td>
+            <button 
+              [disabled]="page.isUpdating" 
+              (click)="updateTitle(page)"
+            >
+              Update
+            </button>
+            <span *ngIf="page.isUpdated" class="success-icon">✅</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="bulk-update">
+    <button (click)="goToPreviousPage()" [disabled]="!prevCursor">Previous</button>
+    <button (click)="goToNextPage()" [disabled]="!nextCursor">Next</button>
+    <button 
+      class="bulk-button" 
+      [disabled]="bulkInProgress"
+      (click)="bulkUpdate()"
+    >
+      Bulk Update
+    </button>
+    <span *ngIf="allUpdated" class="success-icon">✅</span>
+  </div>
+</div>

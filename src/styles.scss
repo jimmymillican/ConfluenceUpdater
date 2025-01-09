@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* Custom Form Field Styling */
+/* Custom Form Field Styling */
+.custom-form-field {
+    --mat-form-field-outline-width: 2px; /* Thin outline */
+    --mat-form-field-outline-color: #b3d8ff; /* Soft blue outline color */
+  
+    width: 100%;
+    background: white; /* White input background */
+    border-radius: 4px; /* Smooth rounded corners */
+    margin-bottom: 10px; /* Add spacing below the field */
+  }
+  
+  /* Reduce the internal padding to make the box thinner */
+  .custom-form-field .mat-form-field-wrapper {
+    padding: 0 8px; /* Thin padding */
+  }
+  
+  /* Thinner height for the input */
+  .custom-form-field .mat-form-field-infix {
+    height: 25px; /* Control the height */
+    line-height: 25px; /* Match the line height */
+    background-color: white; /* Keep the input white */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid transparent; /* Transparent border for non-focus state */
+  }
+  
+  /* Reduce label spacing to match the thinner height */
+  .custom-form-field .mat-form-field-label {
+    top: -6px; /* Adjust label position */
+    font-size: 14px; /* Slightly smaller label size */
+  }
+  
+  /* Add soft blue border on hover */
+  .custom-form-field:hover .mat-form-field-infix {
+    border: 1px solid #b3d8ff; /* Blue border on hover */
+  }
+  
+  /* Add blue border and box-shadow on focus */
+  .custom-form-field.mat-focused .mat-form-field-outline {
+    color: #b3d8ff; /* Blue outline on focus */
+  }
+  
+  .custom-form-field.mat-focused .mat-form-field-infix {
+    border: 1px solid #b3d8ff; /* Blue border */
+    box-shadow: 0 0 4px rgba(179, 216, 255, 0.5); /* Soft shadow for focus */
+  }
+  
+  /* OPTIONAL: Override padding inside the input */
+  .custom-form-field input.mat-input-element {
+    height: 24px; /* Thinner height for the text input */
+    padding: 2px 4px; /* Minimal padding */
+  }
+
+  .mat-mdc-text-field-wrapper{
+    padding: 2px 4px; /* Minimal padding */
+  }
+  
+  .mdc-notched-outline{
+    height:40%;
+  }
+ 
+ 
