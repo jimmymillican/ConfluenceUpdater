@@ -2,6 +2,24 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
 
+## Changes to make this work
+
+Step 1 - Create an API token in Confluence 
+
+Step 2 - Add your authHeader into ConfluenceService.ts
+
+    private authHeader = `Basic ${btoa('[ email or username here]:[ API TOKEN ]')}`;
+
+Step 3 -  For now you will need to manually add in the space-id for the titles you want to change in ConfluenceService.ts
+
+    'space-id': '3087007783',
+
+Step 4 -  change the proxy target to your confluence page
+
+    "target": "https://[yourcompany name].atlassian.net",
+
+Step 4 -  Run locally
+
 ## Development server
 
 To start a local development server, run:
