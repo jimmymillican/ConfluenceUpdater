@@ -1,6 +1,8 @@
-# EhsqFrontend
+# Confluence Updater
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+
+![Image](https://github.com/user-attachments/assets/33c5ab58-4d05-454a-b42a-ee50b1395023)
 
 ## Changes to make this work
 
