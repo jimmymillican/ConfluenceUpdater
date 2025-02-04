@@ -1,5 +1,25 @@
 <div class="container">
   <h1>Confluence Bulk Title Update</h1>
+
+    <!-- New Prefix Input -->
+    <div class="prefix-container">
+      <label for="prefix">Prefix for Titles:</label>
+      <input id="prefix" type="text" [(ngModel)]="titlePrefix" (input)="applyPrefix()" />
+    </div>
+
+     <!-- Find and Replace Input -->
+  <div class="find-replace-container">
+    <label for="findText">Find:</label>
+    <input id="findText" type="text" [(ngModel)]="findText" />
+
+    <label for="replaceText">Replace with:</label>
+    <input id="replaceText" type="text" [(ngModel)]="replaceText" />
+
+    <button (click)="applyFindReplace()">Replace All</button>
+  </div>
+
+  <button (click)="resetTitles()">Reset Titles</button>
+    
   <div class="table-container">
     <table class="custom-table">
       <thead>

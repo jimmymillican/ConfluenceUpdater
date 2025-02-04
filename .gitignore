@@ -11,6 +11,7 @@
 npm-debug.log
 yarn-error.log
 
+
 # IDEs and editors
 .idea/
 .project
@@ -27,6 +28,7 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+.env
 
 # Miscellaneous
 /.angular/cache
@@ -36,6 +38,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+proxy.conf.json
 
 # System files
 .DS_Store

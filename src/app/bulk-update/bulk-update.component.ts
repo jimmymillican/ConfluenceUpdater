@@ -10,8 +10,11 @@ import { Observable } from 'rxjs';
 })
 export class BulkUpdateComponent implements OnInit {
   pages: any[] = [];
+  titlePrefix: string = '';
+  findText: string = ''; // Text to find
+  replaceText: string = ''; // Text to replace with
   displayedColumns: string[] = ['title', 'action'];
-  bulkInProgress = true; // Flag to indicate if bulk update is in progress // KEEPING THIS DISABLED
+  bulkInProgress = false; // Flag to indicate if bulk update is in progress // KEEPING THIS DISABLED
   allUpdated = false; // Flag to indicate if all pages are updated
   currentPage: number = 0;
   pageSize: number = 10;
@@ -43,10 +46,32 @@ export class BulkUpdateComponent implements OnInit {
       (err) => console.error('Error fetching pages:', err)
     );
   }
+  
   extractCursor(link: string): string {
     if (!link) return '';
     const url = new URL(link, window.location.origin); // Use window.location.origin as the base URL
     return url.searchParams.get('cursor') || '';
+  }
+
+  applyPrefix(): void {
+    this.pages.forEach(page => {
+      page.newTitle = this.titlePrefix + ' ' + page.title;
+    });
+  }
+
+  applyFindReplace(): void {
+    console.log('Find:', this.findText, 'Replace:', this.replaceText);
+    if (!this.findText.trim()) return; // Avoid replacing empty strings
+  
+    this.pages.forEach(page => {
+      page.newTitle = page.newTitle.replace(new RegExp(this.findText, 'g'), this.replaceText);
+    });
+  }
+
+  resetTitles(): void {
+    this.pages.forEach(page => {
+      page.newTitle = page.title;
+    });
   }
 
   updateTitle(page: any): void {

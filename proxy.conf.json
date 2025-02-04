@@ -1,8 +1,13 @@
 {
-   "/wiki/api/v2": {
-      "target": "https://ecoonline.atlassian.net",
-      "secure": true,
-      "changeOrigin": true,
-      "logLevel": "debug"
-    }
+  "/api": {
+    "target": "${API_TARGET}",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/wiki/api/v2": {
+    "target": "${WIKI_API_TARGET}",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
+}

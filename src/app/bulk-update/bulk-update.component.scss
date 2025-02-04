@@ -45,3 +45,40 @@
   margin-left: 8px;
   font-size: 18px;
 }
+
+.prefix-container {
+  margin-bottom: 15px;
+}
+
+.prefix-container input {
+  padding: 5px;
+  font-size: 16px;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.prefix-container, .find-replace-container {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.find-replace-container input {
+  padding: 5px;
+  font-size: 16px;
+  width: 150px;
+  margin-left: 10px;
+}
+
+.find-replace-container button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.find-replace-container button:hover {
+  background-color: #005bb5;
+}

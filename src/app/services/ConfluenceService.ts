@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ConfluenceService {
   public apiBaseUrl = '/wiki/api/v2';
-  private authHeader = ``;
+  private authHeader = `Basic ${btoa('${WIKI_API_UNAME}:${WIKI_API_KEY}')}`; // REPLACE CREDENTIALS //
 
   constructor(private http: HttpClient) {}
 
@@ -28,9 +28,11 @@ export class ConfluenceService {
       }
     });*/
 
+//https://**URL**/wiki/api/v2/spaces?limit=250&sort=-key for getting the spaceid in postman
+// FieldID SpaceID - '3087007783' , Crisis - '2635760028' mango = '3307536754', EP=  '2972287394' , IEX = '3088121876'
     const  params: any ={
-      'space-id': '3087007783',
-      'limit': '10',//limit.toString(),
+      'space-id': '3310092301', 
+      'limit': '30',//limit.toString(),
       'body-format': 'storage',
       'get-draft': 'false',
      

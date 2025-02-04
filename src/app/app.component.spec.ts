@@ -3,8 +3,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { TenantStateService } from './services/tenantState.Service'; // Update this path
-import { ApiService } from './services/api.service'; // Update this path
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 describe('AppComponent', () => {
@@ -18,8 +16,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
       providers: [
-        TenantStateService,
-        ApiService,
+
         provideHttpClient(),
         provideHttpClientTesting()
       ]
